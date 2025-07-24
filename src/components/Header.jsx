@@ -22,23 +22,21 @@ export default function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              {/*
-                <li className="nav-item">
-                  <NavLink className="nav-link active" to="/">
-                    Home
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    About
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/contact">
-                    Contact
-                  </NavLink>
-                              </li>
-                */}
+              <li className="nav-item">
+                <NavLink className="nav-link active" to="/">
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Products">
+                  Products
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/contact">
+                  Contact
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
