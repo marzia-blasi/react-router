@@ -9,3 +9,7 @@
 body {
   background-color: #ededed;
 }
+
+.container-light {
+  width: 50%;
+}
