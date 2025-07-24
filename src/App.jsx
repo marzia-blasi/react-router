@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import Products from "./pages/Products";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route Component={DefaultLayout}>
             <Route index Component={HomePage} />
             <Route path="/Products" Component={Products} />
+            <Route path="/Contact" Component={Contact} />
           </Route>
         </Routes>
       </BrowserRouter>
