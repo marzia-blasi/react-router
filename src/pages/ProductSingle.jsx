@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 export default function ProductSingle() {
   const { id } = useParams();
-  console.log(id);
+
   const urlApiGet = `https://fakestoreapi.com/products/${id}`;
   const [product, setProduct] = useState({});
 
@@ -19,10 +19,20 @@ export default function ProductSingle() {
   return (
     <>
       <div className="container">
-        <div className="card col-6 mx-auto">
-          <img src={product.image} alt="" />
-          <div className="card-body">
-            <h3 className="card-title">{product.title}</h3>
+        <div className="row">
+          <div className="col-md-6">
+            <div className="container-light">
+              <div className="card">
+                <img src={product.image} alt="" className="card-img-top" />
+                <div className="card-body">
+                  <h3 className="card-title">{product.title}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-md-6 d-flex align-items-start">
+            <div>{product.description}</div>
           </div>
         </div>
       </div>
