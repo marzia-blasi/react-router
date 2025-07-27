@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import ProductSingle from "./pages/ProductSingle";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/Products" Component={Products} />
             <Route path="/Contact" Component={Contact} />
             <Route path="/ProductSingle/:id" Component={ProductSingle} />
+            <Route path="*" Component={NotFoundPage} />
           </Route>
         </Routes>
       </BrowserRouter>
