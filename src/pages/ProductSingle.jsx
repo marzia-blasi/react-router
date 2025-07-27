@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function ProductSingle() {
   const { id } = useParams();
-
+  const productId = Number(id);
   const urlApiGet = `https://fakestoreapi.com/products/${id}`;
   const [product, setProduct] = useState({});
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(urlApiGet)
@@ -34,13 +38,9 @@ export default function ProductSingle() {
           <div className="col-md-6 d-flex align-items-start">
             <div>{product.description}</div>
             <div>
-              <button
-                onClick={() => {
-                  console.log("clik");
-                }}
-              >
-                Prossimo prodotto
-              </button>
+              <Link to={`/ProductSingle/${productId + 1}`}>
+                <button>Prossimo prodotto</button>
+              </Link>
             </div>
           </div>
         </div>
