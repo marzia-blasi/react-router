@@ -42,6 +42,15 @@ export default function ProductSingle() {
                 <button>Prossimo prodotto</button>
               </Link>
             </div>
+            <div>
+              <button
+                onClick={() => {
+                  navigate(`/ProductSingle/${productId + 1}`);
+                }}
+              >
+                Prossimo prodotto ma con navigate{" "}
+              </button>
+            </div>
           </div>
         </div>
       </div>

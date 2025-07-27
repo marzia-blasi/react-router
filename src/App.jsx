@@ -14,11 +14,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route Component={DefaultLayout}>
+            <Route path="*" Component={NotFoundPage} />
             <Route index Component={HomePage} />
             <Route path="/Products" Component={Products} />
             <Route path="/Contact" Component={Contact} />
             <Route path="/ProductSingle/:id" Component={ProductSingle} />
-            <Route path="*" Component={NotFoundPage} />
           </Route>
         </Routes>
       </BrowserRouter>
