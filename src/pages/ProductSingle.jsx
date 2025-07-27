@@ -18,7 +18,7 @@ export default function ProductSingle() {
         console.log(data);
         setProduct(data);
       });
-  }, []);
+  }, [productId]);
 
   return (
     <>
