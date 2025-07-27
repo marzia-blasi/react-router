@@ -33,6 +33,15 @@ export default function ProductSingle() {
 
           <div className="col-md-6 d-flex align-items-start">
             <div>{product.description}</div>
+            <div>
+              <button
+                onClick={() => {
+                  console.log("clik");
+                }}
+              >
+                Prossimo prodotto
+              </button>
+            </div>
           </div>
         </div>
       </div>
